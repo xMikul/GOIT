@@ -8,17 +8,23 @@ function myColorChange() {
   element.style.color = "red";
 }
 
-function mojaFunkcja() {
-  const clients = ["Mango", "Poly", "Ajax"];
-  const clientNameToFind = "Poly";
-  let message;
+function mojaFunkcja(imie) {
 
-  for (const client of clients) {
-    if (client === clientNameToFind) {
-      message = "Klient z takim imieniem jest w bazie danych!";
+    const clients = ["Mango", "Poly", "Ajax"];
+    const clientNameToFind = "Patryk";
+    let message;
+    
+    for (const client of clients) {
+    
+      if (client === imie) {
+        message = "Klient z takim imieniem jest w bazie danych!";
+        break;
+      }
+    
+      message = "Nie znaleźliśmy takiego klienta w bazie danych!";
     }
+    
+    console.log(message);
+    
 
-    message = "Nie znaleźliśmy klienta w bazie danych!";
-  }
-  console.log(message);
 }
